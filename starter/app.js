@@ -2,6 +2,10 @@ const express = require("express");
 const app = express();
 const tasks = require("./routes/task");
 
+// middleware
+
+app.use(express.json())
+
 // Routes
 
 app.get("/hello", (req, res) => {
